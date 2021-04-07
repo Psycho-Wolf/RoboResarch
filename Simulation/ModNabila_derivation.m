@@ -1,14 +1,16 @@
-syms theta1 theta2 dottheta1 dottheta2 theta3 dottheta3
+syms theta1 theta2 theta3 theta4 dottheta1 dottheta2 dottheta3 dottheta4
+syms m1 m2 m3 m4
+syms J1xx J1xy J1xz J1yy J1yz J1zz J2xx J2xy J2xz J2yy J2yz J2zz J3xx J3xy J3xz J3yy J3yz J3zz J4xx J4xy J4xz J4yy J4yz J4zz
+syms r11cmx r11cmy r11cmz r22cmx r22cmy r22cmz r33cmx r33cmy r33cmz r44cmx r44cmy r44cmz
 
+gamma = [theta1;theta2;theta3;theta4];
+dotgamma = [dottheta1;dottheta2;dottheta3;dottheta4];
 
-gamma = [theta1;theta2;theta3];
-dotgamma = [dottheta1;dottheta2;dottheta3];
-m1 = 3.62564899;
-oneonercm = [0;.01906083;.09908556];
-m2 = 7.28910514; 
-twotworcm = [0;.19160707;.07507103];
-m3 = 2.96056704;
-threethreercm = [0;.08913956;.10830011];
+oneonercm = [r11cmx; r11cmy; r11cmz];
+r22cm = [r11cmx; r11cmy; r11cmz];
+oneonercm = [r11cmx; r11cmy; r11cmz];
+oneonercm = [r11cmx; r11cmy; r11cmz];
+
 g = [0;0;9.81].';
 Gam1 = oneonercm*m1;
 Gam2 = twotworcm*m2; 
